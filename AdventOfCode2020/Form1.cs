@@ -40,13 +40,13 @@ namespace AdventOfCode2020
             switch ((int)dayNumber.Value)
             {
                 case 1:
-                    outputBox.Text = "\n- - - - DAY 1  - - - - \n- - - - PART 2 - - - -\n\n" + Day1.PartTwoOutput(inputBox.Text);
+                    outputBox.Text = "\n- - - - DAY 1   - - - - \n- - - - PART 2 - - - -\n\n" + Day1.PartTwoOutput(inputBox.Text);
                     break;
                 case 2:
-                    outputBox.Text = "\n- - - - DAY 2  - - - - \n- - - - PART 2 - - - -\n\n" + Day2.PartTwoOutput(inputBox.Text);
+                    outputBox.Text = "\n- - - - DAY 2   - - - - \n- - - - PART 2 - - - -\n\n" + Day2.PartTwoOutput(inputBox.Text);
                     break;
                 case 3:
-                    outputBox.Text = "\n- - - - DAY 3  - - - - \n- - - - PART 2 - - - -\n\n" + Day3.PartTwoOutput(inputBox.Text);
+                    outputBox.Text = "\n- - - - DAY 3   - - - - \n- - - - PART 2 - - - -\n\n" + Day3.PartTwoOutput(inputBox.Text);
                     break;
                 default:
                     break;

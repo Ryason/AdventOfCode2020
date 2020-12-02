@@ -8,7 +8,7 @@ namespace AdventOfCode2020
 {
     static class Day1
     {
-        //PART ONE
+        #region Day One
         public static string PartOneOutput(string input)
         {
             string output = "";
@@ -35,8 +35,9 @@ namespace AdventOfCode2020
             }
             return output.ToString();
         }
+        #endregion
 
-        //PART TWO
+        #region Day Two
         public static string PartTwoOutput(string input)
         {
             string output = "";
@@ -67,5 +68,6 @@ namespace AdventOfCode2020
 
             return output.ToString();
         }
+        #endregion
     }
 }
