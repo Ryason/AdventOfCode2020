@@ -28,26 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.Button1 = new System.Windows.Forms.Button();
             this.dayNumber = new System.Windows.Forms.NumericUpDown();
             this.inputBox = new System.Windows.Forms.RichTextBox();
             this.outputBox = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.Button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dayNumber)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // Button1
             // 
-            this.button1.Location = new System.Drawing.Point(246, 161);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(50, 22);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "RUN 1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.Button1.Location = new System.Drawing.Point(246, 161);
+            this.Button1.Name = "Button1";
+            this.Button1.Size = new System.Drawing.Size(50, 22);
+            this.Button1.TabIndex = 0;
+            this.Button1.Text = "RUN 1";
+            this.Button1.UseVisualStyleBackColor = true;
+            this.Button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // dayNumber
             // 
@@ -115,29 +115,29 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "OUTPUT";
             // 
-            // button2
+            // Button2
             // 
-            this.button2.Location = new System.Drawing.Point(246, 189);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(50, 22);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "RUN 2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.Button2.Location = new System.Drawing.Point(246, 189);
+            this.Button2.Name = "Button2";
+            this.Button2.Size = new System.Drawing.Size(50, 22);
+            this.Button2.TabIndex = 7;
+            this.Button2.Text = "RUN 2";
+            this.Button2.UseVisualStyleBackColor = true;
+            this.Button2.Click += new System.EventHandler(this.Button2_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(550, 323);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.Button2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.outputBox);
             this.Controls.Add(this.inputBox);
             this.Controls.Add(this.dayNumber);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Button1);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dayNumber)).EndInit();
@@ -148,14 +148,14 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Button1;
         private System.Windows.Forms.NumericUpDown dayNumber;
         private System.Windows.Forms.RichTextBox inputBox;
         private System.Windows.Forms.RichTextBox outputBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button Button2;
     }
 }
 

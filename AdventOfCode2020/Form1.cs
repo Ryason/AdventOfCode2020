@@ -17,7 +17,7 @@ namespace AdventOfCode2020
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
             switch ((int)dayNumber.Value)
             {
@@ -33,12 +33,15 @@ namespace AdventOfCode2020
                 case 4:
                     outputBox.Text = "\n- - - - DAY 4 - PART 1 - - - -\n\n" + Day4.PartOneOutput(inputBox.Text);
                     break;
+                case 5:
+                    outputBox.Text = "\n- - - - DAY 5 - PART 1 - - - -\n\n" + Day5.PartOneOutput(inputBox.Text);
+                    break;
                 default:
                     break;
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void Button2_Click(object sender, EventArgs e)
         {
             switch ((int)dayNumber.Value)
             {
@@ -53,6 +56,9 @@ namespace AdventOfCode2020
                     break;
                 case 4:
                     outputBox.Text = "\n- - - - DAY 4 - PART 2 - - - -\n\n" + Day4.PartTwoOutput(inputBox.Text);
+                    break;
+                case 5:
+                    outputBox.Text = "\n- - - - DAY 5 - PART 2 - - - -\n\n" + Day5.PartTwoOutput(inputBox.Text);
                     break;
                 default:
                     break;
