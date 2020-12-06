@@ -46,11 +46,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Day1.cs" />
-    <Compile Include="Day2.cs" />
-    <Compile Include="Day3.cs" />
-    <Compile Include="Day4.cs" />
-    <Compile Include="Day5.cs" />
+    <Compile Include="Days\Day1.cs" />
+    <Compile Include="Days\Day10.cs" />
+    <Compile Include="Days\Day11.cs" />
+    <Compile Include="Days\Day12.cs" />
+    <Compile Include="Days\Day13.cs" />
+    <Compile Include="Days\Day14.cs" />
+    <Compile Include="Days\Day15.cs" />
+    <Compile Include="Days\Day16.cs" />
+    <Compile Include="Days\Day17.cs" />
+    <Compile Include="Days\Day18.cs" />
+    <Compile Include="Days\Day19.cs" />
+    <Compile Include="Days\Day2.cs" />
+    <Compile Include="Days\Day20.cs" />
+    <Compile Include="Days\Day21.cs" />
+    <Compile Include="Days\Day22.cs" />
+    <Compile Include="Days\Day23.cs" />
+    <Compile Include="Days\Day24.cs" />
+    <Compile Include="Days\Day25.cs" />
+    <Compile Include="Days\Day3.cs" />
+    <Compile Include="Days\Day4.cs" />
+    <Compile Include="Days\Day5.cs" />
+    <Compile Include="Days\Day6.cs" />
+    <Compile Include="Days\Day7.cs" />
+    <Compile Include="Days\Day8.cs" />
+    <Compile Include="Days\Day9.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,5 +104,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
