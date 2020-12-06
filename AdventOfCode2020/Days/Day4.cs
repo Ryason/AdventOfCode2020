@@ -15,7 +15,7 @@ namespace AdventOfCode2020
         #region Part One
         public static string PartOneOutput(string rawInput)
         {
-            string[] input = rawInput.Split(new string[] { "\n", "\n" }, StringSplitOptions.None);
+            string[] input = rawInput.Split(new string[] { "\r", "\r" }, StringSplitOptions.None);
             string str = "";
 
             int count = 0;
