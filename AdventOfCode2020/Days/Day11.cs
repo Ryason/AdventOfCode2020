@@ -14,6 +14,7 @@ namespace AdventOfCode2020
         #region Part One
         public static string PartOneOutput(string rawInput)
         {
+            var watch = System.Diagnostics.Stopwatch.StartNew();
             string[] input = rawInput.Split('\n');
             List<string[]> seatPlan = new List<string[]>();
             List<string> row = new List<string>();
@@ -87,7 +88,9 @@ namespace AdventOfCode2020
                     }
                 }
             }
+            watch.Stop();
 
+            Console.WriteLine($"Execution Time: {watch.ElapsedMilliseconds} ms");
             return $"{steps} steps until balanced state\n{count} seats occupied";
         }
         #endregion
@@ -95,6 +98,7 @@ namespace AdventOfCode2020
         #region Part Two
         public static string PartTwoOutput(string rawInput)
         {
+            var watch = System.Diagnostics.Stopwatch.StartNew();
             string[] input = rawInput.Split('\n');
             List<string[]> seatPlan = new List<string[]>();
             List<string> row = new List<string>();
@@ -168,7 +172,9 @@ namespace AdventOfCode2020
                     }
                 }
             }
+            watch.Stop();
 
+            Console.WriteLine($"Execution Time: {watch.ElapsedMilliseconds} ms");
             return $"{steps} steps until balanced state\n{count} seats occupied";
         }
         #endregion
