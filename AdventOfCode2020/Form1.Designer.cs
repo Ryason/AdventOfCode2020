@@ -67,7 +67,7 @@
             this.dayNumber.Size = new System.Drawing.Size(47, 20);
             this.dayNumber.TabIndex = 1;
             this.dayNumber.Value = new decimal(new int[] {
-            10,
+            14,
             0,
             0,
             0});
