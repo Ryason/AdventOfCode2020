@@ -28,18 +28,12 @@ namespace AdventOfCode2020
 
                 string[] operation = str.Split('=');
 
-                
-
                 operation[0] = operation[0].Replace(" ", "");
                 operation[1] = operation[1].Replace(" ", "");
-
-
-                Console.WriteLine($"{operation[0]} : {operation[1]}");
 
                 if (operation[0] == "mask")
                 {
                     mask = operation[1].ToCharArray();
-                    
                 }
                 else
                 {
@@ -52,11 +46,12 @@ namespace AdventOfCode2020
                     }
 
                     string valBinary = Convert.ToString(memVal,2);
+
                     valBinary = new string('0',36 - valBinary.Length) + valBinary;
+
                     char[] binaryArray = valBinary.ToCharArray();
-                    //apply mask to binary string >> convert back to long >> store at memLoc
 
-
+                    //apply mask to binary string >> convert back to long >> store val at memLoc
                     for (int i = 0; i < mask.Length; i++)
                     {
                         if (mask[i] != 'X')
@@ -64,15 +59,10 @@ namespace AdventOfCode2020
                             binaryArray[i] = mask[i];
                         }
                     }
-                    Console.WriteLine(new string(binaryArray));
-                    memory[memLoc] = Convert.ToInt64(new string(binaryArray), 2);
 
+                    memory[memLoc] = Convert.ToInt64(new string(binaryArray), 2);
                 }
             }
-
-            long answer;
-
-            memory.Values.Sum();
 
             return memory.Values.Sum().ToString();
         }
@@ -97,18 +87,12 @@ namespace AdventOfCode2020
 
                 string[] operation = str.Split('=');
 
-
-
                 operation[0] = operation[0].Replace(" ", "");
                 operation[1] = operation[1].Replace(" ", "");
-
-
-                Console.WriteLine($"{operation[0]} : {operation[1]}");
 
                 if (operation[0] == "mask")
                 {
                     mask = operation[1].ToCharArray();
-
                 }
                 else
                 {
@@ -120,12 +104,14 @@ namespace AdventOfCode2020
                         memory.Add(memLoc, 0);
                     }
 
-                    string valBinary = Convert.ToString(memVal, 2);
-                    valBinary = new string('0', 36 - valBinary.Length) + valBinary;
-                    char[] binaryArray = valBinary.ToCharArray();
-                    //apply mask to binary string >> convert back to long >> store at memLoc
+                    //apply mask to binary representation of memoryLocation >> store val at all momory locations
+                    string memBinary = Convert.ToString(memLoc, 2);
 
+                    memBinary = new string('0', 36 - memBinary.Length) + memBinary;
 
+                    char[] binaryArray = memBinary.ToCharArray();
+
+                    //apply mask and send to function to return all memLocations
                     for (int i = 0; i < mask.Length; i++)
                     {
                         if (mask[i] != '0')
@@ -133,25 +119,33 @@ namespace AdventOfCode2020
                             binaryArray[i] = mask[i];
                         }
                     }
-                    Console.WriteLine(new string(binaryArray));
 
-                    ReturnSumOfAllBinaryNumbers(new string(binaryArray));
+                    List<long> memLocs = ReturnMemoryLocations(new string(binaryArray));
 
-                    //memory[memLoc] = Convert.ToInt64(new string(binaryArray), 2);
-
+                    //for each memory location >> add val to memory dict
+                    foreach (var item in memLocs)
+                    {
+                        if (!memory.ContainsKey(item))
+                        {
+                            memory.Add(item, memVal);
+                        }
+                        else
+                        {
+                            memory[item] = memVal;
+                        }
+                    }
                 }
             }
 
-            
-
-            return "a";
+            return memory.Values.Sum().ToString();
         }
         #endregion
 
         #region Functions
-        public static long ReturnSumOfAllBinaryNumbers(string binaryString)
+        public static List<long> ReturnMemoryLocations(string binaryString)
         {
             List<int> xLoc = new List<int>();
+            List<long> memoryPositions = new List<long>();
 
             for (int i = 0; i < binaryString.Length; i++)
             {
@@ -162,6 +156,7 @@ namespace AdventOfCode2020
             }
 
             List<string> allNumbers = new List<string>();
+            allNumbers.Add("");
 
             for (int i = 0; i < binaryString.Length; i++)
             {
@@ -175,10 +170,10 @@ namespace AdventOfCode2020
                 }
             }
 
-            
             for (int i = 0; i < xLoc.Count(); i++)
             {
                 int allNumbersCount = allNumbers.Count();
+
                 //take all previous numbers and switch current bit to a 0
                 for (int j = 0; j < allNumbersCount; j++)
                 {
@@ -192,10 +187,10 @@ namespace AdventOfCode2020
 
             foreach (var item in allNumbers)
             {
-                Console.WriteLine(allNumbers);
+                memoryPositions.Add(Convert.ToInt64(item, 2));
             }
 
-            return 0;
+            return memoryPositions;
         }
         #endregion
     }
